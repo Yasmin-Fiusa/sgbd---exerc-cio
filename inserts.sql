@@ -1,36 +1,43 @@
+--Insert na tabela Genres
 INSERT INTO Genres (nameGenre)
-VALUES     ('FicÁ„o CientÌfica'),
+VALUES     ('Fic√ß√£o Cient√≠fica'),
            ('Fantasia'),
 		   ('Romance'),
-		   ('MistÈrio'),
+		   ('Mist√©rio'),
 		   ('Biografia');
 
+--Insert na tabela Publishers
 INSERT INTO Publishers (namePublisher, country)
 VALUES     ('Editora Arqueiro', 'Brasil'),
-           ('IntrÌnseca', 'Brasil'),
+           ('Intr√≠nseca', 'Brasil'),
 		   ('Rocco', 'Brasil'),
 		   ('Aleph', 'Brasil');
 
+--Insert na tabela Authors
 INSERT INTO Authors (nameAuthor, birth_year, nationality)
-VALUES     ('J.K. Rowling', 1965, 'Brit‚nica'),
-           ('George Orwell', 1903, 'Brit‚nico'),
-		   ('J.R.R. Tolkien', 1892, 'Brit‚nico'),
-		   ('Agatha Christie', 1890, 'Brit‚nica'),
+VALUES     ('J.K. Rowling', 1965, 'Brit√¢nica'),
+           ('George Orwell', 1903, 'Brit√¢nico'),
+		   ('J.R.R. Tolkien', 1892, 'Brit√¢nico'),
+		   ('Agatha Christie', 1890, 'Brit√¢nica'),
 		   ('Walter Isaacson', 1952, 'Americano');
 
+--Insert na tabela Books
 INSERT INTO Books (title, authorsID, publisherID, genresID, publicationYear, price)
 VALUES     ('Harry Potter e a Pedra Filosofal', 1, 3, 2, 1997, 45.50),
-           ('O Senhor dos AnÈis', 3, 1, 2, 1954, 89.90),
+           ('O Senhor dos An√©is', 3, 1, 2, 1954, 89.90),
 		   ('1984', 2, 4, 1, 1949, 35.00),
 		   ('O Assassinato no Expresso do Oriente', 4, 1, 4, 1934, 29.90),
 		   ('Steve Jobs', 5, 2, 5, 2011, 75.00),
-		   ('Harry Potter e a C‚mara Secreta', 1, 3, 2, 1998, 48.00);
+		   ('Harry Potter e a C√¢mara Secreta', 1, 3, 2, 1998, 48.00);
 
+--Insert na tabela Customers
 INSERT INTO Customers (nameCustomer, email, joinDate)
 VALUES     ('Ana Silva', 'ana.s@email.com', '2022-03-15'),
            ('Bruno Costa', 'bruno.c@email.com', '2022-05-20'),
 		   ('Carla Dias', 'carla.d@email.com', '2023-01-10');
 
+
+--Insert na tabela Sales
 INSERT INTO Sales (booksID, customerID, saleDate, quantity, totalPrice)
 VALUES     (1, 1, '2023-02-10 14:30', 1, 45.50),
            (3, 2, '2023-02-12 11:00', 2, 70.00),
@@ -38,4 +45,5 @@ VALUES     (1, 1, '2023-02-10 14:30', 1, 45.50),
 		   (2, 3, '2023-04-20 12:45', 1, 89.90),
 		   (1, 2, '2023-05-01 16:00', 1, 45.50),
 		   (4, 3, '2023-06-15 09:20', 1, 29.90),
+
 		   (6, 1, '2023-07-01 10:10', 1, 48.00);
