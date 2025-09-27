@@ -1,3 +1,4 @@
+--Criação da tabela Authors
 CREATE TABLE Authors (
        authorsID           INT               PRIMARY KEY             IDENTITY(1,1),
 	   nameAuthor          VARCHAR(100)      NOT NULL,
@@ -5,11 +6,13 @@ CREATE TABLE Authors (
 	   nationality         VARCHAR(50)       NOT NULL,
 );
 
+--Criação da tabela Genres
 CREATE TABLE Genres (
        genresID            INT               PRIMARY KEY             IDENTITY(1,1),
 	   nameGenre           VARCHAR(50)       NOT NULL,
 );
 
+--Criação da tabela Customers
 CREATE TABLE Customers (
        customerID          INT               PRIMARY KEY             IDENTITY(1,1),
 	   nameCustomer        VARCHAR(100)      NOT NULL,
@@ -17,12 +20,14 @@ CREATE TABLE Customers (
 	   joinDate            DATE              NOT NULL,
 );
 
+--Criação da tabela Publishers
 CREATE TABLE Publishers (
        publisherID         INT               PRIMARY KEY             IDENTITY(1,1),
 	   namePublisher       VARCHAR(50)       NOT NULL,
 	   country             VARCHAR(50)       NOT NULL,
 );
 
+--Criação da tabela Books com 3 chaves estrangeiras
 CREATE TABLE Books (
        booksID             INT               PRIMARY KEY             IDENTITY(1,1),
 	   title               VARCHAR(100)      NOT NULL,
@@ -37,6 +42,7 @@ CREATE TABLE Books (
 	   FOREIGN KEY (genresID) REFERENCES Genres(genresID),
 );
 
+--Criação da tabela Sales com 2 chaves estrangeiras
 CREATE TABLE Sales (
        salesID             INT               PRIMARY KEY             IDENTITY(1,1),
 	   booksID             INT               NOT NULL,
@@ -47,4 +53,5 @@ CREATE TABLE Sales (
 
 	   FOREIGN KEY (booksID) REFERENCES Books(booksID),
 	   FOREIGN KEY (customerID) REFERENCES Customers(customerID),
+
 );
