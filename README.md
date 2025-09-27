@@ -21,3 +21,5 @@ As tabelas criadas representam os principais elementos de uma biblioteca: <br>- 
     <span>🛠️ Tecnologias Utilizadas</span>
 </h2>
 - SQL <br>- SQL Server</br>
+
+<br> <p><a href="www.linkedin.com/in/yasmin-vitória-fiusa-silva-3651132b6" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a></p>
